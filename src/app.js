@@ -25,7 +25,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
+  
 
   let degreeElement = document.querySelector("#degree");
   degreeElement.innerHTML = Math.round(response.data.temperature.current);
