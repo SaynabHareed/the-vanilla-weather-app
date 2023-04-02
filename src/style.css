@@ -1,3 +1,42 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #675d50;
+}
+.weather-app {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 3px solid #f3deba;
+  border-radius: 5px;
+}
+
+.source {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
 h1 {
-    color: red;
+  font-size: 45px;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+#degree {
+  color: blue;
+  font-size: 30px;
+  position: relative;
+  top: -5px;
+}
+
+#icon {
+  position: relative;
+  left: -10px;
+}
+
+#description {
+  text-transform: capitalize;
 }
