@@ -56,7 +56,7 @@ function displayForecast() {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "616b14cbd38253313b3b8852fa77335d";
+  let apiKey = "f81614abe2395d5dfecd45b9298041de";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apiKey}`;
   console.log(apiUrl);
 }
