@@ -24,7 +24,8 @@ function formatDate(timestamp) {
   return `${day} ${hours} : ${minutes}`;
 }
 
-function displayForcast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let days = ["Wednes", "Thurs", "Fri", "Sat", "Sun", "Mon"];
   let forecastHTML = `<div class="row">`;
@@ -56,10 +57,10 @@ function displayForcast() {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
-
-  let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={coordinates.lon}&lat={coordinates.lat}&key={apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -109,4 +110,3 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("London");
-displayForcast();
